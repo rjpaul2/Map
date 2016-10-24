@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+   	<link rel = "stylesheet" href  = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+ 		<!-- This key needs to be updated -->
+   	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4eZyGb8cQEmJ9SdklN2D2w9QuvndCBTQ"></script>   
+   	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+   	<script src="scripts/notify.js"></script>
+   	<script type ="text/javascript" src="map/map.js"></script>
+   	<title>Admin Map</title>
+   	<link rel="icon" href="../../images/tab-icon.png">
+  </head>
+  <body onload = "initMap()">
+   	<div id="panel">
+   		<div id = "loginPanel">   			
+   			<h3>Admin Login</h3><hr id = "hr1">		
+  					<p><input type="text" id = "email" name="email" placeholder = "Email"></p>
+  					<p><input type="password" id = "password" name="password" placeholder = "Password" onkeydown="if(event.keyCode == 13)loginButton();"></p>
+  					<p><input type="button" id = "loginButton" value="Login" onclick = "loginButton()"></p>	
+				<div id = "empty"><p>nothing to show</p></div>
+			</div>
+			<div id = "filterPanel">
+				<p id = filterHeader>Filter Panel</p><hr id = "hr2">
+				<p id = "dateHeader">Dates:</p>
+				<div id = dateFilter>
+					From:<br><input type = "date" id = "from"><br>
+					To:<br><input type = "date" id = "to"><br>
+					Or:<br><input type = "checkbox" id = "validJobs"> Current Jobs Only<br><br>
+				</div>	
+				<div id = "jobFilter">
+					<p id = "jobHeader">Jobs:</p>
+					<input type = "checkbox" id = "cleaning" checked = "checked"> Limpieza<img src = "img/clean-icon.png" id = "cleanIcon"><br>
+					<input type = "checkbox" id = "electric" checked = "checked"> Electicidad<img src = "img/electric-icon.png" id = "electricIcon"><br> 
+					<input type = "checkbox" id = "specialists" checked = "checked"> Maestros Especialistas<img src = "img/fix-icon.png" id = "fixIcon"><br>
+					<input type = "checkbox" id = "gas" checked = "checked"> Gasfilteria<img src = "img/gas-icon.png" id = "gasIcon"><br><br>
+				</div>
+				<div id = "dataFilter">
+					<p id = "dataHeader">Extras:</p>
+					<input type = "checkbox" id = "routes"> Show Routes<br>
+					<input type = "checkbox" id = "data"> Show Data<br>
+				</div>	
+				<div id = "shade"><button id = "filterButton">Filter</button></div>
+				<div id = "copywrite"><p>&copy; 2016 tuten.cl</p></div>			
+			</div>		
+   	</div>
+   	<div id="map"></div>
+ 	</body>
+</html>

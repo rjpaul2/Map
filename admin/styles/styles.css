@@ -1,0 +1,154 @@
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(245,245,245);
+  overflow: hidden;
+}
+#map{
+	height: 100%;	
+}
+::-webkit-scrollbar {/*Make scrollbar invisible -- perhaps some compatibility issues on other web browsers?*/
+    width: 0px; 
+    background: transparent;  
+}
+#panelButton{
+  cursor: pointer;
+  float: left;
+  margin-bottom: 22px;
+  margin-top: 4px;
+  margin-right: 2px;
+  text-align: center;
+} 
+#panel{
+	background-image: url("panel-background.png");
+	background-repeat: no-repeat;
+	background-color: rgb(252,252,252);
+	box-shadow: 0 2px 6px rgba(255,255,255,.7);
+	font-family: 'Roboto','sans-serif';
+	line-height: 30px;
+	border-left: 2px solid rgb(86,197,199);
+	height: 100%;
+	float: right;
+	width: 290px;
+	overflow: scroll;
+	display: none;
+}
+h3, #filterHeader{
+	opacity: 0.5;
+	font-size: 30px;
+}
+#hr1, #hr2{
+	border-width: 4px;
+	margin-right: 20px;
+	border-color: rgb(86,197,199);
+}
+#hr2{
+	margin-right: 30px;
+}
+#from, #to{
+	width: 200px;
+}
+#loginPanel{
+	margin-top: 20px;
+  margin-bottom : 22px;
+  margin-left : 20px;
+}
+#loginButton, #filterButton{
+	background-color: rgb(86,197,199);
+	width: 250px;
+	border-radius: 5px;
+	border: 2px solid rgb(245,245,245);
+	color: white;
+}
+#filterButton{
+	width: 100%;
+}
+#fixIcon, #electricIcon, #cleanIcon, #gasIcon{
+	width: 10%;
+	height: 10%;
+	margin-right: 10px;
+	float: left;
+}
+#copywrite{
+	font-size: 10px;
+	margin-left: 180px;
+	bottom: -17px;
+	position: absolute;
+}
+#shade{
+	width: 290px;
+	height: 80px;
+	background-color: rgb(220,220,220);
+	margin-top: 50px;
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right:20px;
+	margin-left: -30px;
+	position: relative;
+}
+#email, #password{
+	width: 250px;
+	border: 2px solid rgb(86,197,199);
+}
+#errorText, #empty{
+  font-family: Roboto,Arial,sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 0px 1px 1px rgb(256,256,256);
+	color: rgb(110,110,110);
+}
+#empty{
+	margin-top: 250px;
+	margin-left: 45px;
+	opacity: 0.3;
+}
+#filterPanel{
+	margin-left: 30px;
+	margin-top: 10px;
+}
+#dateHeader, #jobHeader, #dataHeader{
+	opacity: 0.5;
+	font-size: 20px;
+}
+/*Cool fade-in stuff*/
+#panelButton, #map, #icon{
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+  from{
+      opacity: 0;
+  }
+  to{
+      opacity: 1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+  from{
+      opacity: 0;
+  }
+  to{
+      opacity: 1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from{
+      opacity: 0;
+  }
+  to{
+      opacity: 1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from{
+      opacity: 0;
+  }
+  to{
+      opacity: 1;
+  }
+}
